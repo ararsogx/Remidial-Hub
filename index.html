@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSphere | Academic Course & Exam Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <a href="#" class="logo">
+                    <div class="logo-icon">E</div>
+                    <span>EduSphere</span>
+                </a>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search courses, exams, or resources...">
+                </div>
+                <div class="user-actions">
+                    <!-- Day/Night Mode Toggle (icon only) -->
+                    <button class="theme-toggle-btn" id="theme-toggle-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar Navigation -->
+    <div class="mobile-sidebar" id="mobile-sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <div class="logo-icon">E</div>
+                <span>EduSphere</span>
+            </a>
+            <button class="close-sidebar-btn" id="close-sidebar-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-content">
+            <div class="user-profile">
+                <div class="user-avatar large">JS</div>
+                <div class="user-info">
+                    <h3>John Smith</h3>
+                    <p class="user-academic">Grade 11 • Science Stream</p>
+                </div>
+            </div>
+            
+            <!-- Mobile Notifications Section -->
+            <div class="mobile-notifications">
+                <div class="notifications-header">
+                    <h3>Recent Updates</h3>
+                    <button class="view-all-mobile">View All</button>
+                </div>
+                <div class="notifications-list-mobile">
+                    <div class="notification-item-mobile unread">
+                        <div class="notification-icon success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Exam Results Released</h4>
+                            <span class="notification-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item-mobile unread">
+                        <div class="notification-icon primary">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>New Study Materials</h4>
+                            <span class="notification-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item-mobile">
+                        <div class="notification-icon warning">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Exam Registration Open</h4>
+                            <span class="notification-time">1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" data-page="home">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </li>
+                    <li data-page="modules">
+                        <i class="fas fa-book-open"></i>
+                        <span>Course Modules</span>
+                    </li>
+                    <li data-page="exam-bank">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Exam Bank</span>
+                    </li>
+                    <li data-page="progress">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Progress Tracker</span>
+                    </li>
+                    <li data-page="profile">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </li>
+                    <li data-page="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="academic-year">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Academic Year: 2023-2024</span>
+                </div>
+                <div class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel" id="notification-panel">
+        <div class="notification-header">
+            <h3>Academic Updates</h3>
+            <button class="mark-all-read">Mark all as read</button>
+        </div>
+        
+        <div class="notifications-list">
+            <div class="notification-item unread">
+                <div class="notification-icon success">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="notification-content">
+                    <h4>Midterm Results Published</h4>
+                    <p>Your Biology exam results are now available for review</p>
+                    <span class="notification-time">2 hours ago</span>
+                </div>
+            </div>
+            
+            <div class="notification-item unread">
+                <div class="notification-icon primary">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="notification-content">
+                    <h4>New Revision Materials</h4>
+                    <p>Updated Chemistry revision notes have been added to your course</p>
+                    <span class="notification-time">5 hours ago</span>
+                </div>
+            </div>
+            
+            <div class="notification-item">
+                <div class="notification-icon warning">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="notification-content">
+                    <h4>Final Exam Registration</h4>
+                    <p>Registration for final exams opens tomorrow at 9:00 AM</p>
+                    <span class="notification-time">1 day ago</span>
+                </div>
+            </div>
+            
+            <div class="notification-item">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="notification-content">
+                    <h4>Scheduled Maintenance</h4>
+                    <p>Platform will be unavailable for maintenance on Sunday, 2:00 AM - 4:00 AM</p>
+                    <span class="notification-time">2 days ago</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notification-footer">
+            <button class="view-all-btn">View All Updates</button>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Dashboard Page -->
+        <section id="home-page" class="page active">
+            <div class="dashboard-header">
+                <div class="welcome-section">
+                    <h1>Good morning, John</h1>
+                    <p class="dashboard-subtitle">Your academic progress and upcoming assessments</p>
+                </div>
+                <div class="quick-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon success">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value">87%</span>
+                            <span class="stat-label">Overall Progress</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon primary">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Exams This Week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon warning">
+                            <i class="fas fa-hourglass-half"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value">2</span>
+                            <span class="stat-label">Pending Assignments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="academic-overview">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-line"></i> Course Progress</h2>
+                    <a href="#" class="view-all-link">View All</a>
+                </div>
+                
+                <div class="progress-cards">
+                    <div class="progress-card">
+                        <div class="course-header">
+                            <div class="course-icon maths">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="course-info">
+                                <h3>Mathematics</h3>
+                                <span class="course-code">MATH-2023</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 85%;"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <span>85% Complete</span>
+                            <span class="next-assessment">Next: Chapter Test (Oct 15)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-card">
+                        <div class="course-header">
+                            <div class="course-icon biology">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <div class="course-info">
+                                <h3>Biology</h3>
+                                <span class="course-code">BIO-2023</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 72%;"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <span>72% Complete</span>
+                            <span class="next-assessment">Next: Midterm Exam (Oct 20)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-card">
+                        <div class="course-header">
+                            <div class="course-icon physics">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div class="course-info">
+                                <h3>Physics</h3>
+                                <span class="course-code">PHY-2023</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 65%;"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <span>65% Complete</span>
+                            <span class="next-assessment">Next: Lab Report (Oct 18)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-card">
+                        <div class="course-header">
+                            <div class="course-icon english">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div class="course-info">
+                                <h3>English</h3>
+                                <span class="course-code">ENG-2023</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <span>90% Complete</span>
+                            <span class="next-assessment">Next: Essay Submission (Oct 12)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exam-schedule">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> Upcoming Examinations</h2>
+                    <a href="#" class="view-all-link">View Calendar</a>
+                </div>
+                
+                <div class="exam-cards">
+                    <div class="exam-card">
+                        <div class="exam-date">
+                            <span class="day">15</span>
+                            <span class="month">Oct</span>
+                        </div>
+                        <div class="exam-info">
+                            <h3>Mathematics - Chapter Test</h3>
+                            <p class="exam-details">Chapter 5: Trigonometry • 45 minutes</p>
+                            <div class="exam-preparation">
+                                <span>Preparation Level:</span>
+                                <div class="preparation-bar">
+                                    <div class="preparation-fill" style="width: 75%;"></div>
+                                </div>
+                                <span class="preparation-text">75% Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-card">
+                        <div class="exam-date">
+                            <span class="day">20</span>
+                            <span class="month">Oct</span>
+                        </div>
+                        <div class="exam-info">
+                            <h3>Biology - Midterm Examination</h3>
+                            <p class="exam-details">Units 1-3 • 90 minutes</p>
+                            <div class="exam-preparation">
+                                <span>Preparation Level:</span>
+                                <div class="preparation-bar">
+                                    <div class="preparation-fill" style="width: 60%;"></div>
+                                </div>
+                                <span class="preparation-text">60% Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-card">
+                        <div class="exam-date">
+                            <span class="day">25</span>
+                            <span class="month">Oct</span>
+                        </div>
+                        <div class="exam-info">
+                            <h3>Physics - Unit Test</h3>
+                            <p class="exam-details">Mechanics • 60 minutes</p>
+                            <div class="exam-preparation">
+                                <span>Preparation Level:</span>
+                                <div class="preparation-bar">
+                                    <div class="preparation-fill" style="width: 80%;"></div>
+                                </div>
+                                <span class="preparation-text">80% Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="study-resources">
+                <div class="section-header">
+                    <h2><i class="fas fa-book"></i> Recommended Study Resources</h2>
+                    <a href="#" class="view-all-link">Browse Library</a>
+                </div>
+                
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>Mathematics Formula Sheet</h3>
+                        <p>Comprehensive reference for all formulas covered in the curriculum</p>
+                        <div class="resource-meta">
+                            <span>12 pages</span>
+                            <span>Updated: Sep 28</span>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Biology Lab Demonstrations</h3>
+                        <p>Video tutorials for all practical experiments in the syllabus</p>
+                        <div class="resource-meta">
+                            <span>8 videos</span>
+                            <span>Duration: 45 min</span>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Physics Concept Maps</h3>
+                        <p>Visual representations of key physics concepts and their relationships</p>
+                        <div class="resource-meta">
+                            <span>15 diagrams</span>
+                            <span>Updated: Oct 1</span>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3>English Practice Essays</h3>
+                        <p>Sample essays with examiner comments and grading criteria</p>
+                        <div class="resource-meta">
+                            <span>25 samples</span>
+                            <span>Updated: Sep 15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modules Selection Page -->
+        <section id="modules-page" class="page">
+            <div class="stream-selection">
+                <h1 class="section-title">Select Your Academic Stream</h1>
+                <p class="section-subtitle">Choose the stream that matches your current academic program</p>
+                
+                <div class="stream-options">
+                    <div class="stream-card" data-stream="natural">
+                        <div class="stream-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Natural Science Stream</h3>
+                        <p>Comprehensive curriculum for science-focused students</p>
+                        <div class="stream-courses">
+                            <span>Core Subjects: English, Mathematics, Physics, Chemistry, Biology</span>
+                        </div>
+                        <div class="stream-stats">
+                            <span><i class="fas fa-graduation-cap"></i> 5 Subjects</span>
+                            <span><i class="fas fa-tasks"></i> 42 Modules</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stream-card" data-stream="social">
+                        <div class="stream-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Social Science Stream</h3>
+                        <p>Comprehensive curriculum for humanities-focused students</p>
+                        <div class="stream-courses">
+                            <span>Core Subjects: English, Mathematics, History, Geography</span>
+                        </div>
+                        <div class="stream-stats">
+                            <span><i class="fas fa-graduation-cap"></i> 4 Subjects</span>
+                            <span><i class="fas fa-tasks"></i> 36 Modules</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Grid Page -->
+        <section id="courses-grid-page" class="page">
+            <div class="courses-header">
+                <button class="back-btn" id="back-to-streams">
+                    <i class="fas fa-arrow-left"></i> Back to Streams
+                </button>
+                <h1 class="section-title" id="stream-title">Natural Science Stream</h1>
+                <p class="section-subtitle" id="stream-description">Comprehensive curriculum for science-focused students</p>
+            </div>
+            
+            <div class="academic-courses">
+                <div class="academic-course-card">
+                    <div class="course-header">
+                        <div class="course-icon maths">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="course-info">
+                            <h3>Mathematics</h3>
+                            <span class="course-code">MATH-2023</span>
+                        </div>
+                    </div>
+                    <div class="course-description">
+                        <p>Comprehensive coverage of algebra, calculus, geometry, and statistics as per the national curriculum</p>
+                    </div>
+                    <div class="course-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>12 Modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>45 Resources</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn">View Modules</button>
+                </div>
+                
+                <div class="academic-course-card">
+                    <div class="course-header">
+                        <div class="course-icon biology">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div class="course-info">
+                            <h3>Biology</h3>
+                            <span class="course-code">BIO-2023</span>
+                        </div>
+                    </div>
+                    <div class="course-description">
+                        <p>In-depth study of living organisms, genetics, ecology, and human physiology aligned with standard curriculum</p>
+                    </div>
+                    <div class="course-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>10 Modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>38 Resources</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn">View Modules</button>
+                </div>
+                
+                <div class="academic-course-card">
+                    <div class="course-header">
+                        <div class="course-icon chemistry">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="course-info">
+                            <h3>Chemistry</h3>
+                            <span class="course-code">CHEM-2023</span>
+                        </div>
+                    </div>
+                    <div class="course-description">
+                        <p>Study of chemical principles, reactions, organic chemistry, and laboratory techniques for academic excellence</p>
+                    </div>
+                    <div class="course-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>9 Modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>42 Resources</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn">View Modules</button>
+                </div>
+                
+                <div class="academic-course-card">
+                    <div class="course-header">
+                        <div class="course-icon physics">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <div class="course-info">
+                            <h3>Physics</h3>
+                            <span class="course-code">PHY-2023</span>
+                        </div>
+                    </div>
+                    <div class="course-description">
+                        <p>Comprehensive coverage of mechanics, electricity, magnetism, optics, and modern physics concepts</p>
+                    </div>
+                    <div class="course-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>8 Modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>35 Resources</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn">View Modules</button>
+                </div>
+                
+                <div class="academic-course-card">
+                    <div class="course-header">
+                        <div class="course-icon english">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="course-info">
+                            <h3>English</h3>
+                            <span class="course-code">ENG-2023</span>
+                        </div>
+                    </div>
+                    <div class="course-description">
+                        <p>Literature analysis, writing skills, grammar, and communication skills development for academic success</p>
+                    </div>
+                    <div class="course-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>11 Modules</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>40 Resources</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn">View Modules</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Detail Page -->
+        <section id="course-detail-page" class="page">
+            <div class="course-detail-header">
+                <button class="back-btn" id="back-to-courses">
+                    <i class="fas fa-arrow-left"></i> Back to Courses
+                </button>
+                <h1 class="section-title" id="course-title">Biology</h1>
+                <p class="section-subtitle">Comprehensive curriculum modules and academic resources</p>
+            </div>
+            
+            <div class="modules-container">
+                <div class="module-section">
+                    <h2><i class="fas fa-book-open"></i> Course Modules</h2>
+                    <div class="modules-grid" id="modules-grid">
+                        <!-- Modules will be dynamically loaded here -->
+                    </div>
+                </div>
+                
+                <div class="notes-section">
+                    <h2><i class="fas fa-file-alt"></i> Academic Resources</h2>
+                    <div class="notes-list" id="notes-list">
+                        <!-- Notes will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exam Bank Stream Selection Page -->
+        <section id="exam-bank-page" class="page">
+            <div class="stream-selection">
+                <h1 class="section-title">Select Your Academic Stream</h1>
+                <p class="section-subtitle">Choose the stream for exam preparation and assessment</p>
+                
+                <div class="stream-options">
+                    <div class="stream-card" data-stream="natural">
+                        <div class="stream-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Natural Science Stream</h3>
+                        <p>Exam preparation materials for science students</p>
+                        <div class="stream-courses">
+                            <span>Core Subjects: English, Mathematics, Physics, Chemistry, Biology</span>
+                        </div>
+                        <div class="stream-stats">
+                            <span><i class="fas fa-file-alt"></i> 85 Exams</span>
+                            <span><i class="fas fa-stopwatch"></i> 120 hrs Practice</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stream-card" data-stream="social">
+                        <div class="stream-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Social Science Stream</h3>
+                        <p>Exam preparation materials for humanities students</p>
+                        <div class="stream-courses">
+                            <span>Core Subjects: English, Mathematics, History, Geography</span>
+                        </div>
+                        <div class="stream-stats">
+                            <span><i class="fas fa-file-alt"></i> 68 Exams</span>
+                            <span><i class="fas fa-stopwatch"></i> 95 hrs Practice</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exam Bank Courses Grid Page -->
+        <section id="exam-courses-grid-page" class="page">
+            <div class="courses-header">
+                <button class="back-btn" id="back-to-exam-streams">
+                    <i class="fas fa-arrow-left"></i> Back to Streams
+                </button>
+                <h1 class="section-title" id="exam-stream-title">Natural Science Stream</h1>
+                <p class="section-subtitle" id="exam-stream-description">Exam preparation materials for science students</p>
+            </div>
+            
+            <div class="academic-courses">
+                <div class="academic-course-card">
+                    <div class="course-header">
+                        <div class="course-icon maths">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="course-info">
+                            <h3>Mathematics</h3>
+                            <span class="course-code">MATH-2023</span>
+                        </div>
+                    </div>
+                    <div class="course-description">
+                        <p>Practice exams, sample papers, and assessment questions aligned with the curriculum</p>
+                    </div>
+                    <div class="course-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>24 Exams</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span>36 hrs Practice</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn">View Exams</button>
+                </div>
+                
+                <div class="academic-course-card">
+                    <div class="course-header">
+                        <div class="course-icon biology">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div class="course-info">
+                            <h3>Biology</h3>
+                            <span class="course-code">BIO-2023</span>
+                        </div>
+                    </div>
+                    <div class="course-description">
+                        <p>Previous years' papers, chapter tests, and final exam simulations for thorough preparation</p>
+                    </div>
+                    <div class="course-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>22 Exams</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span>32 hrs Practice</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn">View Exams</button>
+                </div>
+                
+                <div class="academic-course-card">
+                    <div class="course-header">
+                        <div class="course-icon chemistry">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="course-info">
+                            <h3>Chemistry</h3>
+                            <span class="course-code">CHEM-2023</span>
+                        </div>
+                    </div>
+                    <div class="course-description">
+                        <p>Practice papers, practical assessments, and theory examinations for comprehensive preparation</p>
+                    </div>
+                    <div class="course-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>18 Exams</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span>27 hrs Practice</span>
+                        </div>
+                    </div>
+                    <button class="course-action-btn">View Exams</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exam Detail Page -->
+        <section id="exam-detail-page" class="page">
+            <div class="exam-detail-header">
+                <button class="back-btn" id="back-to-exam-courses">
+                    <i class="fas fa-arrow-left"></i> Back to Courses
+                </button>
+                <h1 class="section-title" id="exam-course-title">Biology</h1>
+                <p class="section-subtitle">Practice examinations and assessment materials</p>
+            </div>
+            
+            <div class="exams-container">
+                <div class="mid-exams-section">
+                    <h2><i class="fas fa-file-medical"></i> Mid Term Examinations</h2>
+                    <div class="exams-grid" id="mid-exams-grid">
+                        <!-- Mid exams will be dynamically loaded here -->
+                    </div>
+                </div>
+                
+                <div class="final-exams-section">
+                    <h2><i class="fas fa-certificate"></i> Final Examinations</h2>
+                    <div class="exams-grid" id="final-exams-grid">
+                        <!-- Final exams will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profile-page" class="page">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <span>JS</span>
+                </div>
+                <div class="profile-info">
+                    <h1>John Smith</h1>
+                    <p class="profile-subtitle">Grade 11 Student • Natural Science Stream</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">87%</span>
+                            <span class="stat-label">Overall Progress</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">4.2</span>
+                            <span class="stat-label">GPA</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">18</span>
+                            <span class="stat-label">Completed Modules</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="academic-history">
+                <h2><i class="fas fa-history"></i> Academic Performance</h2>
+                <div class="performance-grid">
+                    <div class="performance-card">
+                        <h3>Current Term</h3>
+                        <div class="performance-chart">
+                            <div class="chart-bar maths" style="height: 85%;">85%</div>
+                            <div class="chart-bar biology" style="height: 78%;">78%</div>
+                            <div class="chart-bar physics" style="height: 82%;">82%</div>
+                            <div class="chart-bar chemistry" style="height: 76%;">76%</div>
+                            <div class="chart-bar english" style="height: 92%;">92%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="performance-card">
+                        <h3>Previous Term</h3>
+                        <div class="performance-chart">
+                            <div class="chart-bar maths" style="height: 80%;">80%</div>
+                            <div class="chart-bar biology" style="height: 75%;">75%</div>
+                            <div class="chart-bar physics" style="height: 78%;">78%</div>
+                            <div class="chart-bar chemistry" style="height: 72%;">72%</div>
+                            <div class="chart-bar english" style="height: 88%;">88%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Settings Page -->
+        <section id="settings-page" class="page">
+            <div class="settings-header">
+                <h1><i class="fas fa-cog"></i> Platform Settings</h1>
+                <p>Customize your learning experience and account preferences</p>
+            </div>
+            
+            <div class="settings-grid">
+                <div class="settings-card">
+                    <h3><i class="fas fa-user-cog"></i> Account Settings</h3>
+                    <div class="settings-option">
+                        <label>Display Name</label>
+                        <input type="text" value="John Smith">
+                    </div>
+                    <div class="settings-option">
+                        <label>Email Address</label>
+                        <input type="email" value="john.smith@example.com">
+                    </div>
+                    <div class="settings-option">
+                        <label>Academic Stream</label>
+                        <select>
+                            <option>Natural Science</option>
+                            <option>Social Science</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="settings-card">
+                    <h3><i class="fas fa-bell"></i> Notification Preferences</h3>
+                    <div class="settings-option checkbox">
+                        <input type="checkbox" id="exam-notifications" checked>
+                        <label for="exam-notifications">Exam Reminders</label>
+                    </div>
+                    <div class="settings-option checkbox">
+                        <input type="checkbox" id="result-notifications" checked>
+                        <label for="result-notifications">Result Notifications</label>
+                    </div>
+                    <div class="settings-option checkbox">
+                        <input type="checkbox" id="resource-notifications" checked>
+                        <label for="resource-notifications">New Resource Alerts</label>
+                    </div>
+                    <div class="settings-option checkbox">
+                        <input type="checkbox" id="email-notifications">
+                        <label for="email-notifications">Email Notifications</label>
+                    </div>
+                </div>
+                
+                <div class="settings-card">
+                    <h3><i class="fas fa-desktop"></i> Display Settings</h3>
+                    <div class="settings-option">
+                        <label>Theme Mode</label>
+                        <div class="theme-selector">
+                            <button class="theme-btn active">Light</button>
+                            <button class="theme-btn">Dark</button>
+                            <button class="theme-btn">System</button>
+                        </div>
+                    </div>
+                    <div class="settings-option">
+                        <label>Font Size</label>
+                        <div class="font-size-selector">
+                            <button class="font-btn">A</button>
+                            <button class="font-btn active">A</button>
+                            <button class="font-btn">A</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <button class="nav-item active" data-page="home">
+                <i class="fas fa-home nav-icon"></i>
+                <span class="nav-label">Dashboard</span>
+            </button>
+            <button class="nav-item" data-page="modules">
+                <i class="fas fa-book-open nav-icon"></i>
+                <span class="nav-label">Modules</span>
+            </button>
+            <button class="nav-item" data-page="exam-bank">
+                <i class="fas fa-clipboard-list nav-icon"></i>
+                <span class="nav-label">Exams</span>
+            </button>
+            <button class="nav-item" data-page="profile">
+                <i class="fas fa-user nav-icon"></i>
+                <span class="nav-label">Profile</span>
+            </button>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
